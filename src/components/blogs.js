@@ -1,22 +1,21 @@
 import React from "react";
-import { blogs } from "./data";
-import "./App.css";
+import { blogs } from "../data";
 
 export default function myBlogs() {
   return (
-    <div className="blogs">
+    <div className="blogs" id="blog">
       {blogs.map((blog, index) => {
         const { title, link, img, desc } = blog;
         return (
           <article key={index} className="single-blog">
-            <h3 className="title">{title}</h3>
             <img src={img} alt={title} />
-            <div>
+            <h3 className="title">{title}</h3>
+            <p className="description">
+              {desc.substring(0, 250)}...
               <a href={link} target="_" className="link">
-                Link to blog
+                read more
               </a>
-            </div>
-            <p>{desc}</p>
+            </p>
           </article>
         );
       })}
