@@ -4,21 +4,38 @@ import { blogs } from "../data";
 export default function myBlogs() {
   return (
     <div className="blogs" id="blog">
-      {blogs.map((blog, index) => {
-        const { title, link, img, desc } = blog;
-        return (
-          <article key={index} className="single-blog">
-            <img src={img} alt={title} />
-            <h3 className="title">{title}</h3>
-            <p className="description">
-              {desc.substring(0, 250)}...
-              <a href={link} target="_" className="link">
-                read more
-              </a>
-            </p>
-          </article>
-        );
-      })}
+      <div className="blogs__bio-image">
+        <h1 className="text-secondary">My Blogs</h1>
+      </div>
+      <div className="blogs__items">
+        {blogs.map((blog, index) => {
+          const { title, link, img, desc } = blog;
+          return (
+            <article key={index} className="blogs__items__item">
+              <div>
+                <h2 className="blogs__items__item__title">{title}</h2>
+                <p className="blogs__items__item__description">
+                  {desc.substring(0, 270)}...
+                  <a
+                    href={link}
+                    target="_"
+                    className="blogs__items__item__link text-secondary"
+                  >
+                    read more
+                  </a>
+                </p>
+              </div>
+              <div>
+                <img
+                  className="blogs__items__item__img"
+                  src={img}
+                  alt={title}
+                />
+              </div>
+            </article>
+          );
+        })}
+      </div>
     </div>
   );
 }

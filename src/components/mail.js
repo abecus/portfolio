@@ -1,5 +1,6 @@
 import React from "react";
 import emailjs from "emailjs-com";
+import { FaGithub } from "react-icons/fa";
 
 export default function mail() {
   function sendEmail(e) {
@@ -24,61 +25,41 @@ export default function mail() {
   }
 
   return (
-    <div className="contact" id="contact">
-      <p>
-        Whether you want to get in touch, talk about a project collaboration, or
-        just say hi, I'd love to hear from you. Simply fill the from and send me
-        an email.
-      </p>
-
-      <form className="form" onSubmit={sendEmail}>
-        <p>
-          <label className="label">Name</label>
-          <br />
-          <input type="text" name="user_name" required />
-          <br />
-          <br />
-          <label className="label">Email</label>
-          <br />
-          <input type="text" name="user_email" required />
-          <br />
-          <br />
-          <label className="label">Message</label>
-          <br />
-          <textarea id="text" rows="1" name="message" required></textarea>
-          <br />
-          <br />
-          <br />
-          <input className="submit-button" type="submit" value="Submit" />
-        </p>
-      </form>
-      <hr />
-      <footer className="footer">
-        <a
-          target="_blank"
-          rel="noreferrer"
-          className="link footer-link"
-          href="https://github.com/abecus"
-        >
-          GitHub
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          className="link footer-link"
-          href="https://www.linkedin.com/in/abdulsalamone/"
-        >
-          LinkedIn
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          className="link footer-link"
-          href="https://medium.com/@sleepingFish"
-        >
-          Medium
-        </a>
-      </footer>
+    <div className="contact">
+      <h2 className="secondary-text">Contact Me...</h2>
+      <div className="contact__container" id="contact">
+        <div className="contact__container__left-side">
+          <form className="form" onSubmit={sendEmail}>
+            <label className="label">Name</label>
+            <br />
+            <input type="text" name="user_name" required />
+            <br />
+            <br />
+            <label className="label">Email</label>
+            <br />
+            <input type="email" name="user_email" required />
+            <br />
+            <br />
+            <label className="label">Message</label>
+            <br />
+            <textarea id="text" rows="2" name="message" required></textarea>
+            <br />
+            <br />
+            <div className="button-container">
+              <button type="submit" className="submit-button" value="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+        <div className="contact__container__right-side">
+          <p>
+            Whether you want to get in touch, talk about a project
+            collaboration, or just say hi, I'd love to hear from you. Simply
+            fill the from and send me an email.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -50,13 +50,13 @@ export const projectToShow = [
   "Artificial-Intelligence",
   "DIP",
   "connect-4",
-  "Django-React-Todo-WebApp",
+  // "Django-React-Todo-WebApp",
   "DS-and-Algorithms",
   "LCTestSuit",
   "Pong-GoDot",
   "React-Django-AI-TicTacToe",
   "Typing-Bolt-Hack",
-  "Django-React-Digit-Recognizer"
+  "Django-React-Digit-Recognizer",
 ];
 
 // const medium_url = "https://medium.com/@sleepingFish/latest?format=json";
