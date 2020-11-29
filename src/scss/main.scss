@@ -23,6 +23,7 @@ h3 {
 a {
   color: set-text-color($primary-color);
   text-decoration: none;
+  font-weight: 500;
 }
 
 body {
@@ -78,7 +79,8 @@ html::-webkit- {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, $secondary-color, $primary-color);
+  // background: linear-gradient(180deg, $secondary-color, $primary-color);
+  background: $secondary-color;
   border-radius: 30px;
 }
 html::-webkit-scrollbar-track {
@@ -86,6 +88,5 @@ html::-webkit-scrollbar-track {
 }
 
 .text-secondary {
-  // color: lighten($color: $secondary-color, $amount: 10%);
   color: $secondary-color;
 }

@@ -35,14 +35,15 @@
     .form input,
     .form textarea {
       border: 0;
-      border-bottom: 2px solid gray;
+      border-bottom: 2px solid
+        change-shade($color: $primary-color, $amount: 60%, $shade: "light");
       width: 100%;
       padding-bottom: 5px;
       margin: 0.5rem;
       font-family: inherit;
       outline: 0;
       font-size: 1rem;
-      color: white;
+      color: set-text-color($primary-color);
       background-color: transparent;
       @include transition-ease;
 
@@ -67,7 +68,11 @@
         border-radius: 5px;
 
         &:hover {
-          background-color: lighten($color: $secondary-color, $amount: 10%);
+          background-color: change-shade(
+            $color: $secondary-color,
+            $amount: 10%,
+            $shade: "light"
+          );
           cursor: pointer;
           box-shadow: rgba(114, 113, 113, 0.075) 2px 3px 1px;
           transform: translate3d(-1px, -2px, 2px);

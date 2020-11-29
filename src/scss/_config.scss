@@ -1,6 +1,30 @@
-$primary-color: #272727;
-$secondary-color: #ff652f;
-$third-color: #bada55;
+// :root,
+// [data-theme="default"] {
+//   --color-primary: hsl(220, 90%, 56%);
+//   --color-primary-h: 220;
+//   --color-primary-s: 90%;
+//   --color-primary-l: 56%;
+// }
+
+// $primary-color: #272727;
+// $secondary-color: #ff652f;
+
+// $temp-color: var(--primary-color);
+
+// --primary-color: #272727;
+// --secondary-color: #ff652f;
+
+// $primary-color: white;
+// $secondary-color: black;
+
+// $primary-color: black;
+// $secondary-color: green;
+
+$primary-color: white;
+$secondary-color: green;
+
+// $primary-color: green;
+// $secondary-color: black;
 
 * {
   box-sizing: border-box;
@@ -13,6 +37,22 @@ $third-color: #bada55;
     @return #000;
   } @else {
     @return #fff;
+  }
+}
+
+@function change-shade($color, $amount: 10%, $shade: "dark") {
+  @if ($shade== "dark") {
+    @if (lightness($color) >= $amount) {
+      @return darken($color, $amount);
+    } @else {
+      @return lighten($color, $amount);
+    }
+  } @else {
+    @if (lightness($color) + $amount <= 100%) {
+      @return lighten($color, $amount);
+    } @else {
+      @return darken($color, $amount);
+    }
   }
 }
 
@@ -42,3 +82,15 @@ $third-color: #bada55;
     @content;
   }
 }
+
+// @function toggle-color($i) {
+//   @if ($i==1) {
+//     $primary-color: green;
+//     $secondary-color: black;
+//     $i: 0;
+//   } @else {
+//     $primary-color: black;
+//     $secondary-color: white;
+//     $i: 1;
+//   }
+// }

@@ -30,7 +30,7 @@ export default function Projects() {
           return (
             <div key={index} className="projects__items__item">
               {/* <img src="" alt=""/> */}
-              <h2 className="title">{name}</h2>
+              <h2 className="title">{name.replaceAll("-", " ")}</h2>
               <p className="description">{description}</p>
               <div className="projects__btns">
                 <a href={html_url} target="_" className="projects__btn">

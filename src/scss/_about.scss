@@ -1,13 +1,17 @@
 .about {
+  width: 100vw;
   padding-bottom: 2rem;
   min-height: 100vh;
   height: auto;
-  background-color: lighten($color: $primary-color, $amount: 5%);
+  background-color: change-shade(
+    $color: $primary-color,
+    $amount: 5%,
+    $shade: "light"
+  );
 
   &__boi-image {
     height: 50vh;
     width: 100%;
-    //    backgrond
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,10 +19,11 @@
   }
   p {
     margin: 0.5rem;
+    margin-left: 0rem;
   }
 
   &__bio {
-    width: 60%;
+    width: 60vw;
     text-align: center;
 
     .text-secondary {
@@ -28,14 +33,18 @@
   }
 
   .jobs {
-    width: 60vh;
+    width: 60vw;
     margin: 4rem auto 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
 
     &__job {
-      background: lighten($color: $primary-color, $amount: 10%);
+      background: change-shade(
+        $color: $primary-color,
+        $amount: 10%,
+        $shade: "light"
+      );
       padding: 0.5rem;
       border-bottom: 5px solid $secondary-color;
 
