@@ -4,7 +4,20 @@
   }
 
   .home {
-    padding-top: 40vh;
+    padding-top: 35vh;
+    h2 {
+      padding-left: 4rem;
+    }
+
+    .top-line {
+      padding-left: 4rem;
+      .name {
+        font-size: 5rem;
+      }
+      &__typed {
+        font-size: 3rem;
+      }
+    }
   }
 
   .nav {
@@ -66,6 +79,22 @@
 }
 
 @include media-lg {
+  .home {
+    h2 {
+      padding-left: 6rem;
+    }
+
+    .top-line {
+      padding-left: 6rem;
+      .name {
+        font-size: 6rem;
+      }
+      &__typed {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
   .projects {
     &__items {
       grid-template-columns: repeat(3, 1fr);

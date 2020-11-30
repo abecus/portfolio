@@ -58,6 +58,10 @@ footer {
   padding: 1rem;
   color: set-text-color($primary-color);
   transform: rotate(90deg) translate(-3rem, -5rem);
+
+  &:hover {
+    color: $secondary-color;
+  }
 }
 
 .header {

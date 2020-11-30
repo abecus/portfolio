@@ -1,21 +1,37 @@
 .home {
   height: 100vh;
-  padding-top: 30vh;
+  padding-top: 35vh;
   overflow: hidden;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: start;
+  display: block;
   //   background: url("../images/demo-image-02.jpg") center top;
   //   background-size: cover;
 
-  &__name {
-    font-size: 5rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid set-text-color($primary-color);
+  h2 {
+    padding-left: 2rem;
+    color: change-shade($color: $primary-color, $amount: 70%, $shade: "light");
+  }
 
-    &__last {
-      color: $secondary-color;
-      font-weight: 700;
+  .top-line {
+    padding-left: 2rem;
+    width: fit-content;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid $secondary-color;
+    color: change-shade($color: $primary-color, $amount: 90%, $shade: "light");
+    .name {
+      padding-bottom: 0.5rem;
+      font-size: 4.5rem;
+
+      &__last {
+        color: $secondary-color;
+        font-weight: 600;
+      }
+    }
+    &__typed {
+      font-size: 2.5rem;
+      padding-bottom: 0.5rem;
     }
   }
 }
