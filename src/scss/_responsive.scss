@@ -55,6 +55,15 @@
   .blogs__items {
     font-size: 1.2rem;
     width: 60vw;
+    &__item {
+      grid-template-columns: auto 27%;
+      grid-template-areas: "row-2 row-1";
+
+      .text-container {
+        padding-top: 0.5rem;
+        grid-area: row-2;
+      }
+    }
   }
 
   .contact {

@@ -12,7 +12,7 @@ export default function myBlogs() {
           const { title, link, img, desc } = blog;
           return (
             <article key={index} className="blogs__items__item">
-              <div>
+              <div className="text-container">
                 <h2 className="blogs__items__item__title">{title}</h2>
                 <p className="blogs__items__item__description">
                   {desc.substring(0, 270)}...
@@ -25,7 +25,7 @@ export default function myBlogs() {
                   </a>
                 </p>
               </div>
-              <div>
+              <div className="img-container">
                 <img
                   className="blogs__items__item__img"
                   src={img}
