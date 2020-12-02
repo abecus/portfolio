@@ -10,22 +10,6 @@ import NavBar from "./components/navbar";
 import TextInLine from "./components/textInline";
 
 function App() {
-  function checkSize() {
-    const fontSize = Math.min(1, window.innerWidth / 1000 + 0.1);
-    const tab = Math.min(1.5, window.innerWidth / 1000 - 0.5);
-
-    document.documentElement.style.setProperty("--font-size", `${fontSize}rem`);
-    document.documentElement.style.setProperty("--tab", `${tab}rem`);
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", checkSize);
-    checkSize();
-    return () => {
-      window.removeEventListener("resize", checkSize);
-    };
-  }, []);
-
   return (
     <div className="app">
       <NavBar />

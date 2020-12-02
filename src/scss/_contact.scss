@@ -63,7 +63,8 @@
         width: 5rem;
         font-size: 1rem;
         background-color: $secondary-color;
-        color: white;
+        color: set-text-color($secondary-color);
+        border: none;
         @include transition-ease;
         border-radius: 5px;
 

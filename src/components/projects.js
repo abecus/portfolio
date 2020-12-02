@@ -26,14 +26,19 @@ export default function Projects() {
       </div>
       <div className="projects__items">
         {projects.map((repo, index) => {
-          const { name, html_url, description } = repo;
+          const { id, name, html_url, description } = repo;
           return (
-            <div key={index} className="projects__items__item">
+            <div key={id} className="projects__items__item">
               {/* <img src="" alt=""/> */}
               <h2 className="title">{name.replaceAll("-", " ")}</h2>
               <p className="description">{description}</p>
               <div className="projects__btns">
-                <a href={html_url} target="_" className="projects__btn">
+                <a
+                  href={html_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="projects__btn"
+                >
                   <FaGithub className="projects__btn__git" size={30} />
                 </a>
               </div>

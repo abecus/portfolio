@@ -59,11 +59,16 @@
   left: 0;
   width: 100vw;
   opacity: 0.98;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  // box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
   visibility: hidden;
+  @include transition-ease;
 
   &.open {
     visibility: visible;
+  }
+
+  &.scrolled {
+    box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
   }
 
   .menu-nav {

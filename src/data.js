@@ -2,6 +2,15 @@
 
 export const blogs = [
   {
+    id: 1,
+    title: "Typing Effect in React",
+    img: "https://miro.medium.com/max/700/0*MJ2a1P8c2VpZ9RN1",
+    desc:
+      "Today, we will learn how to implement a Typing Effect in React from scratch. Start by creating a starter react app using npx create-react-app my-app or follow the procedure from here.Go to App.js remove all redundant Elements and add a h1tag where the typing effect will take place.Now import to add additional hooks using import {useEfect, useState} from 'react'Create an array of words that will be type one by one",
+    link: "https://sleepingfish.medium.com/typing-effect-in-react-56697def0473",
+  },
+  {
+    id: 2,
     title:
       "All Pythagorean Triplets Less Than Equal to N in Optimal Time Complexity",
     img: "https://miro.medium.com/max/700/0*kQfRs44MJgeLqkx5",
@@ -11,6 +20,7 @@ export const blogs = [
       "https://levelup.gitconnected.com/all-pythagorean-triplets-less-than-equal-n-in-optimal-time-complexity-babfbe742337",
   },
   {
+    id: 3,
     title: "Mandelbrot Set with Python",
     img: "https://miro.medium.com/max/555/1*3NMRrHfC0BMw_BggU8GPvg.png",
     desc:
@@ -19,6 +29,7 @@ export const blogs = [
       "https://levelup.gitconnected.com/mandelbrot-set-with-python-983e9fc47f56",
   },
   {
+    id: 4,
     title: "Search Technique on Graphs: Breadth-First Search",
     img: "https://miro.medium.com/max/700/1*p4bHowcZgckG1dNjACgPWg.jpeg",
     desc:
@@ -27,6 +38,7 @@ export const blogs = [
       "https://medium.com/better-programming/search-technique-on-graphs-breadth-first-search-dab467f73ff8",
   },
   {
+    id: 5,
     title: "Search Technique on Graphs: Depth-First Search",
     img: "https://miro.medium.com/max/1000/0*Sufk8bfmJcaFJz1e",
     desc:
@@ -36,6 +48,7 @@ export const blogs = [
       "https://medium.com/swlh/vanilla-search-techniques-on-graphs-dfs-and-bfs-c5cff5d0937d",
   },
   {
+    id: 6,
     title: "Graph Theory Algorithms “Simplified”",
     img: "https://miro.medium.com/max/700/1*3wUddlYo5oG7r_qpuxs55g.png",
     desc:

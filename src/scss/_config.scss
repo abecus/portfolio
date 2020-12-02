@@ -17,11 +17,11 @@
 // $primary-color: white;
 // $secondary-color: black;
 
-$primary-color: black;
-$secondary-color: green;
-
-// $primary-color: white;
+// $primary-color: black;
 // $secondary-color: green;
+
+$primary-color: white;
+$secondary-color: green;
 
 // $primary-color: green;
 // $secondary-color: black;
@@ -82,15 +82,3 @@ $secondary-color: green;
     @content;
   }
 }
-
-// @function toggle-color($i) {
-//   @if ($i==1) {
-//     $primary-color: green;
-//     $secondary-color: black;
-//     $i: 0;
-//   } @else {
-//     $primary-color: black;
-//     $secondary-color: white;
-//     $i: 1;
-//   }
-// }

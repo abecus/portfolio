@@ -18,7 +18,7 @@
 
 .home h2 {
   padding-left: 2rem;
-  color: #b3b3b3;
+  color: #4d4d4d;
 }
 
 .home .top-line {
@@ -29,7 +29,7 @@
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
   border-bottom: 2px solid green;
-  color: #e6e6e6;
+  color: #1a1a1a;
 }
 
 .home .top-line .name {
@@ -65,7 +65,7 @@
   top: 0.5rem;
   width: 28px;
   height: 3px;
-  background: #fff;
+  background: #000;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -76,7 +76,7 @@
   top: -8px;
   width: 28px;
   height: 3px;
-  background: #fff;
+  background: #000;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -87,7 +87,7 @@
   top: 8px;
   width: 20px;
   height: 3px;
-  background: #fff;
+  background: #000;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -115,13 +115,18 @@
   left: 0;
   width: 100vw;
   opacity: 0.98;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
   visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .nav.open {
   visibility: visible;
+}
+
+.nav.scrolled {
+  -webkit-box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
 }
 
 .nav .menu-nav {
@@ -140,7 +145,7 @@
           justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background-color: black;
+  background-color: white;
   list-style-type: none;
   padding-right: 1rem;
   -webkit-transform: translateY(-100%);
@@ -219,7 +224,7 @@
   padding-bottom: 2rem;
   min-height: 100vh;
   height: auto;
-  background-color: #0d0d0d;
+  background-color: #f2f2f2;
 }
 
 .about__boi-image {
@@ -266,7 +271,7 @@
 }
 
 .about .jobs__job {
-  background: #1a1a1a;
+  background: #e6e6e6;
   padding: 0.5rem;
   border-bottom: 5px solid green;
 }
@@ -330,7 +335,7 @@
 }
 
 .projects__items__item {
-  background: #1a1a1a;
+  background: #e6e6e6;
   position: relative;
   border-bottom: 5px solid green;
   overflow: hidden;
@@ -404,7 +409,7 @@
 
 .projects__btn__git:hover {
   color: #000;
-  color: black;
+  color: white;
 }
 
 .contact {
@@ -462,14 +467,14 @@
 .contact__container .form input,
 .contact__container .form textarea {
   border: 0;
-  border-bottom: 2px solid #999999;
+  border-bottom: 2px solid #666666;
   width: 100%;
   padding-bottom: 5px;
   margin: 0.5rem;
   font-family: inherit;
   outline: 0;
   font-size: 1rem;
-  color: #fff;
+  color: #000;
   background-color: transparent;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -497,7 +502,8 @@
   width: 5rem;
   font-size: 1rem;
   background-color: green;
-  color: white;
+  color: #fff;
+  border: none;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   border-radius: 5px;
@@ -523,7 +529,7 @@
   padding-bottom: 2rem;
   height: auto;
   min-height: 100vh;
-  background-color: #0d0d0d;
+  background-color: #f2f2f2;
 }
 
 .blogs__bio-image {
@@ -569,7 +575,7 @@
   height: auto;
   -ms-grid-columns: 75% 25%;
       grid-template-columns: 75% 25%;
-  background: #1a1a1a;
+  background: #e6e6e6;
   border-bottom: 5px solid green;
   overflow: hidden;
 }
@@ -652,7 +658,7 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
     height: 100%;
-    background: black;
+    background: white;
     text-align: right;
   }
   .nav .menu-nav__item {
@@ -732,8 +738,8 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: black;
-  color: #fff;
+  background: white;
+  color: #000;
   line-height: 1;
 }
 
@@ -744,7 +750,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 500;
 }
@@ -785,7 +791,7 @@ footer {
   right: 1rem;
   text-align: right;
   padding: 1rem;
-  color: #fff;
+  color: #000;
   -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
           transform: rotate(90deg) translate(-3rem, -5rem);
 }
@@ -820,7 +826,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 html::-webkit-scrollbar-track {
-  background-color: black;
+  background-color: white;
 }
 
 .text-secondary {
