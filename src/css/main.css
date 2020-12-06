@@ -6,22 +6,60 @@
 }
 
 .home {
+  position: relative;
   height: 100vh;
   padding-top: 35vh;
   overflow: hidden;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  text-align: start;
-  display: block;
 }
 
-.home h2 {
+.home .logo {
+  position: absolute;
+  height: 100%;
+  width: 40%;
+  right: 5vw;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.home .logo .texts {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotateZ(-10deg);
+          transform: rotateZ(-10deg);
+}
+
+.home .logo .texts .back_text {
+  visibility: hidden;
+}
+
+.home .logo .texts .front_text {
+  visibility: hidden;
+}
+
+.home__content h2 {
   padding-left: 2rem;
   color: #4d4d4d;
 }
 
-.home .top-line {
+.home__content .top-line {
   padding-left: 2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -32,17 +70,17 @@
   color: #1a1a1a;
 }
 
-.home .top-line .name {
+.home__content .top-line .name {
   padding-bottom: 0.5rem;
   font-size: 4.5rem;
 }
 
-.home .top-line .name__last {
+.home__content .top-line .name__last {
   color: green;
   font-weight: 600;
 }
 
-.home .top-line__typed {
+.home__content .top-line__typed {
   font-size: 2.5rem;
   padding-bottom: 0.5rem;
 }
@@ -176,6 +214,7 @@
 }
 
 .nav .menu-nav__link {
+  position: relative;
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
@@ -185,8 +224,28 @@
   transition: all 0.5s ease-in-out;
 }
 
+.nav .menu-nav__link::before {
+  content: "";
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 1.5rem;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 .nav .menu-nav__link:hover {
   color: green;
+}
+
+.nav .menu-nav__link:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  background-color: green;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -274,6 +333,7 @@
   background: #e6e6e6;
   padding: 0.5rem;
   border-bottom: 5px solid green;
+  border-radius: 10px;
 }
 
 .about .jobs__job h2,
@@ -338,6 +398,7 @@
   background: #e6e6e6;
   position: relative;
   border-bottom: 5px solid green;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -578,6 +639,7 @@
       grid-template-areas: "row-1" "row-2";
   background: #e6e6e6;
   border-bottom: 5px solid green;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -616,6 +678,7 @@
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: row-1;
+  border-radius: 10px;
 }
 
 .blogs__btns {
@@ -731,6 +794,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .home .logo {
+    visibility: visible;
+  }
   .home h2 {
     padding-left: 6rem;
   }
@@ -787,6 +853,7 @@ body {
   height: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  margin-bottom: 1rem;
 }
 
 body .social-icons {
@@ -815,7 +882,7 @@ body .social-icons a:hover {
 footer {
   position: fixed;
   font-size: 1rem;
-  bottom: 0.4rem;
+  bottom: 1rem;
   right: 1rem;
   text-align: right;
   padding: 1rem;

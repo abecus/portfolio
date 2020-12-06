@@ -100,6 +100,7 @@
     }
 
     &__link {
+      position: relative;
       display: inline-block;
       font-size: 2rem;
       text-transform: uppercase;
@@ -107,24 +108,28 @@
       font-weight: 300;
       @include transition-ease;
 
+      &::before {
+        content: "";
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 1.5rem;
+        transform: scaleX(0);
+        @include transition-ease;
+      }
+
       &:hover {
         color: $secondary-color;
+        &::before {
+          visibility: visible;
+          transform: scaleX(1);
+          background-color: $secondary-color;
+        }
       }
     }
   }
 }
-
-// html:not([data-scroll="0"]) {
-//   body {
-//     padding-top: 3em;
-//   }
-//   .nav {
-//     // position: fixed;
-//     // top: 0;
-//     // background-color: #fff;
-//     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
-//   }
-// }
 
 @for $i from 1 to 7 {
   .menu-nav__item:nth-child(#{$i}) {

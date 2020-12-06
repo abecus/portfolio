@@ -1,37 +1,105 @@
 .home {
+  position: relative;
   height: 100vh;
   padding-top: 35vh;
   overflow: hidden;
-  align-items: flex-start;
-  text-align: start;
-  display: block;
-  //   background: url("../images/demo-image-02.jpg") center top;
-  //   background-size: cover;
+  // align-items: flex-start;
+  // text-align: start;
+  // display: grid;
+  // grid-template-columns: auto 35%;
 
-  h2 {
-    padding-left: 2rem;
-    color: change-shade($color: $primary-color, $amount: 70%, $shade: "light");
-  }
+  .logo {
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    right: 5vw;
+    // top: 10vh;
+    bottom: 0;
+    // visibility: hidden;
 
-  .top-line {
-    padding-left: 2rem;
-    width: fit-content;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
-    border-bottom: 2px solid $secondary-color;
-    color: change-shade($color: $primary-color, $amount: 90%, $shade: "light");
-    .name {
-      padding-bottom: 0.5rem;
-      font-size: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
 
-      &__last {
-        color: $secondary-color;
-        font-weight: 600;
+    // background-color: red;
+    .texts {
+      // transform-style: preserve-3d;
+      // background-color: aqua;
+      position: relative;
+      width: 80%;
+      height: 80%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      transform: rotateZ(-10deg);
+      // transition: all 1s ease;
+
+      .back_text {
+        visibility: hidden;
+        // z-index: -1;
+        // position: absolute;
+        // font-weight: 700;
+        // font-size: 32rem;
+        // top: 0rem;
+        // right: 1rem;
+        // // transform: rotateZ(-13deg);
+        // text-shadow: 50px 50px 50px change-shade($primary-color, 80%, "dark");
+      }
+
+      .front_text {
+        visibility: hidden;
+        // font-weight: 700;
+        // color: $secondary-color;
+
+        // font-size: 31rem;
+        // position: absolute;
+        // top: 0rem;
+        // right: 2rem;
+
+        // text-shadow: 50px 50px 50px change-shade($primary-color, 50%, "dark");
+        // -webkit-text-stroke-width: 0px;
+        // -webkit-text-stroke-color: black;
       }
     }
-    &__typed {
-      font-size: 2.5rem;
+  }
+
+  &__content {
+    // padding-top: 35vh;
+
+    h2 {
+      padding-left: 2rem;
+      color: change-shade(
+        $color: $primary-color,
+        $amount: 70%,
+        $shade: "light"
+      );
+    }
+
+    .top-line {
+      padding-left: 2rem;
+      width: fit-content;
       padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid $secondary-color;
+      color: change-shade(
+        $color: $primary-color,
+        $amount: 90%,
+        $shade: "light"
+      );
+      .name {
+        padding-bottom: 0.5rem;
+        font-size: 4.5rem;
+
+        &__last {
+          color: $secondary-color;
+          font-weight: 600;
+        }
+      }
+      &__typed {
+        font-size: 2.5rem;
+        padding-bottom: 0.5rem;
+      }
     }
   }
 }

@@ -30,6 +30,7 @@ body {
   height: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  margin-bottom: 1rem;
 
   .social-icons {
     position: fixed;
@@ -52,7 +53,7 @@ body {
 footer {
   position: fixed;
   font-size: 1rem;
-  bottom: 0.4rem;
+  bottom: 1rem;
   right: 1rem;
   text-align: right;
   padding: 1rem;
@@ -83,7 +84,12 @@ html::-webkit- {
 }
 
 html::-webkit-scrollbar-thumb {
-  // background: linear-gradient(180deg, $secondary-color, $primary-color);
+  // background: linear-gradient(
+  //   180deg,
+  //   $secondary-color 0%,
+  //   change-shade($color: $primary-color, $amount: 50%, $shade: "light") 50%,
+  //   $secondary-color 100%
+  // );
   background: $secondary-color;
   border-radius: 30px;
 }
