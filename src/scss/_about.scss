@@ -1,13 +1,25 @@
+// $primary-color: black;
+// $secondary-color: green;
+
 .about {
-  width: 100vw;
+  position: relative;
+  // width: 100vw;
   padding-bottom: 2rem;
   min-height: 100vh;
   height: auto;
-  background-color: change-shade(
-    $color: $primary-color,
-    $amount: 5%,
-    $shade: "light"
-  );
+  background: transparent;
+  background-color: $primary-color;
+  // background-color: change-shade(
+  //   $color: $primary-color,
+  //   $amount: 5%,
+  //   $shade: "light"
+  // );
+  z-index: 5;
+
+  // margin: 0rem 4rem;
+  box-shadow: 0 0 25px
+    change-shade($color: $primary-color, $amount: 30%, $shade: "dark");
+  // border-radius: 10px;
 
   &__boi-image {
     height: 50vh;
@@ -55,6 +67,7 @@
       }
       h4 {
         margin: 0.2rem 0;
+        font-weight: normal;
       }
       p {
         line-height: 1.3;

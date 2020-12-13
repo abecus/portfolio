@@ -22,6 +22,12 @@
 
   .nav {
     visibility: visible;
+    opacity: 95%;
+
+    &.scrolled {
+      box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
+      // opacity: 95%;
+    }
 
     .menu-nav {
       display: block;
@@ -37,27 +43,6 @@
 
       &__link {
         font-size: 1.5rem;
-        // position: relative;
-
-        // &::before {
-        //   content: "";
-        //   visibility: hidden;
-        //   position: absolute;
-        //   width: 100%;
-        //   height: 2px;
-        //   bottom: 1.5rem;
-        //   transform: scaleX(0);
-        //   @include transition-ease;
-        // }
-
-        // &:hover {
-        //   color: $secondary-color;
-        //   &::before {
-        //     visibility: visible;
-        //     transform: scaleX(1);
-        //     background-color: $secondary-color;
-        //   }
-        // }
       }
     }
   }
@@ -110,9 +95,9 @@
 
 @include media-lg {
   .home {
-    .logo {
-      visibility: visible;
-    }
+    // .logo {
+    //   visibility: visible;
+    // }
     h2 {
       padding-left: 6rem;
     }

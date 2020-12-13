@@ -5,6 +5,7 @@
 @import "projects";
 @import "contact";
 @import "blogs";
+@import "homeBackground";
 @import "responsive";
 
 body {
@@ -12,6 +13,15 @@ body {
   background: $primary-color;
   color: set-text-color($primary-color);
   line-height: 1;
+  position: relative;
+}
+
+.sketch {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  //   color: black;
 }
 
 h1,
@@ -31,7 +41,6 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   margin-bottom: 1rem;
-
   .social-icons {
     position: fixed;
     display: flex !important;
@@ -67,9 +76,9 @@ footer {
 
 .header {
   position: fixed;
-  z-index: 2;
+  z-index: 50;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
 }
 

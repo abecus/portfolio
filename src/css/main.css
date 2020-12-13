@@ -10,48 +10,7 @@
   height: 100vh;
   padding-top: 35vh;
   overflow: hidden;
-}
-
-.home .logo {
-  position: absolute;
-  height: 100%;
-  width: 40%;
-  right: 5vw;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.home .logo .texts {
-  position: relative;
-  width: 80%;
-  height: 80%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: rotateZ(-10deg);
-          transform: rotateZ(-10deg);
-}
-
-.home .logo .texts .back_text {
-  visibility: hidden;
-}
-
-.home .logo .texts .front_text {
-  visibility: hidden;
+  background: transparent;
 }
 
 .home__content h2 {
@@ -160,11 +119,6 @@
 
 .nav.open {
   visibility: visible;
-}
-
-.nav.scrolled {
-  -webkit-box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
 }
 
 .nav .menu-nav {
@@ -279,11 +233,15 @@
 }
 
 .about {
-  width: 100vw;
+  position: relative;
   padding-bottom: 2rem;
   min-height: 100vh;
   height: auto;
-  background-color: #f2f2f2;
+  background: transparent;
+  background-color: white;
+  z-index: 5;
+  -webkit-box-shadow: 0 0 25px #b3b3b3;
+          box-shadow: 0 0 25px #b3b3b3;
 }
 
 .about__boi-image {
@@ -343,6 +301,7 @@
 
 .about .jobs__job h4 {
   margin: 0.2rem 0;
+  font-weight: normal;
 }
 
 .about .jobs__job p {
@@ -590,7 +549,11 @@
   padding-bottom: 2rem;
   height: auto;
   min-height: 100vh;
-  background-color: #f2f2f2;
+  background-color: white;
+  position: relative;
+  z-index: 5;
+  -webkit-box-shadow: 0 0 25px #b3b3b3;
+          box-shadow: 0 0 25px #b3b3b3;
 }
 
 .blogs__bio-image {
@@ -732,6 +695,11 @@
   }
   .nav {
     visibility: visible;
+    opacity: 95%;
+  }
+  .nav.scrolled {
+    -webkit-box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
   }
   .nav .menu-nav {
     display: block;
@@ -794,9 +762,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .home .logo {
-    visibility: visible;
-  }
   .home h2 {
     padding-left: 6rem;
   }
@@ -835,6 +800,14 @@ body {
   background: white;
   color: #000;
   line-height: 1;
+  position: relative;
+}
+
+.sketch {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1,
@@ -897,9 +870,9 @@ footer:hover {
 
 .header {
   position: fixed;
-  z-index: 2;
+  z-index: 50;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

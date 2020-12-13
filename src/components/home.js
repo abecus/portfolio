@@ -44,31 +44,31 @@ export default function Home() {
     return () => clearTimeout(timeout2);
   }, [blink]);
 
-  useEffect(() => {
-    const front_text = document.querySelector(".front_text");
-    const texts = document.querySelector(".texts");
+  // useEffect(() => {
+  //   const front_text = document.querySelector(".front_text");
+  //   const texts = document.querySelector(".texts");
 
-    //Moving Animation Event
-    texts.addEventListener("mousemove", (e) => {
-      let xAxis = (window.innerWidth / 2 - e.pageX) / 30;
-      let yAxis = (window.innerHeight / 2 - e.pageY) / 30;
-      front_text.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-    });
-    //Animate In
-    texts.addEventListener("mouseenter", (e) => {
-      texts.style.transition = "all 1s ease";
-      texts.style.transform = "rotateZ(-17deg)";
-      // front_text.style.transform = "translateZ(200px)";
-      // front_text.style.text_shadow = "translateZ(200px) "
-    });
-    //Animate Out
-    texts.addEventListener("mouseleave", (e) => {
-      texts.style.transition = "all 1s ease";
-      front_text.style.transition = "all 0.5s ease";
-      texts.style.transform = "rotateZ(-10deg)";
-      front_text.style.transform = `rotateY(0deg) rotateX(0deg)`;
-    });
-  }, []);
+  //   //Moving Animation Event
+  //   texts.addEventListener("mousemove", (e) => {
+  //     let xAxis = (window.innerWidth / 2 - e.pageX) / 30;
+  //     let yAxis = (window.innerHeight / 2 - e.pageY) / 30;
+  //     front_text.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  //   });
+  //   //Animate In
+  //   texts.addEventListener("mouseenter", (e) => {
+  //     texts.style.transition = "all 1s ease";
+  //     texts.style.transform = "rotateZ(-17deg)";
+  //     // front_text.style.transform = "translateZ(200px)";
+  //     // front_text.style.text_shadow = "translateZ(200px) "
+  //   });
+  //   //Animate Out
+  //   texts.addEventListener("mouseleave", (e) => {
+  //     texts.style.transition = "all 1s ease";
+  //     front_text.style.transition = "all 0.5s ease";
+  //     texts.style.transform = "rotateZ(-10deg)";
+  //     front_text.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  //   });
+  // }, []);
 
   return (
     <div className="home" id="home">
@@ -86,12 +86,12 @@ export default function Home() {
         </div>
         <h2>Welcome to my Website</h2>
       </div>
-      <div className="logo">
+      {/* <div className="logo">
         <div className="texts">
           <h1 className="front_text">A</h1>
           <h1 className="back_text">A</h1>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

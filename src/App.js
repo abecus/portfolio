@@ -7,12 +7,14 @@ import Footer from "./components/footer";
 import About from "./components/about";
 import Blogs from "./components/blogs";
 import NavBar from "./components/navbar";
-import TextInLine from "./components/textInline";
+// import TextInLine from "./components/textInline";
+import Background from "./components/background";
 
 function App() {
   return (
     <div className="app">
       <NavBar />
+      <Background />
       <Home />
       <About />
       <Projects />
