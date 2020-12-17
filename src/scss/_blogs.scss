@@ -10,7 +10,7 @@
   //   $shade: "light"
   // );
   position: relative;
-  z-index: 5;
+  z-index: 2;
 
   // margin: 0rem 4rem;
   box-shadow: 0 0 25px
@@ -83,29 +83,6 @@
         height: 100%;
         grid-area: row-1;
         border-radius: 10px;
-      }
-    }
-  }
-  &__btns {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    text-align: center;
-  }
-  &__btn {
-    opacity: 0;
-    color: set-text-color($secondary-color);
-    @include transition-ease;
-
-    &__git {
-      @include transition-ease;
-      &:hover {
-        color: set-text-color(set-text-color($secondary-color));
       }
     }
   }

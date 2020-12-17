@@ -2,6 +2,9 @@
   .menu-btn {
     visibility: hidden;
   }
+  .sketch {
+    visibility: visible;
+  }
 
   .home {
     padding-top: 35vh;
@@ -22,11 +25,9 @@
 
   .nav {
     visibility: visible;
-    opacity: 95%;
 
     &.scrolled {
       box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
-      // opacity: 95%;
     }
 
     .menu-nav {

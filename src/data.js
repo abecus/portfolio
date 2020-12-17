@@ -72,4 +72,32 @@ export const projectToShow = [
   "Django-React-Digit-Recognizer",
 ];
 
+export const navbarLinks = [
+  {
+    ref: "#home",
+    name: "Home",
+  },
+  {
+    ref: "#about",
+    name: "About",
+  },
+  {
+    ref: "#projects",
+    name: "projects",
+  },
+  {
+    ref: "#blog",
+    name: "blog",
+  },
+  {
+    ref: "#contact",
+    name: "contact",
+  },
+  {
+    ref:
+      "https://drive.google.com/file/d/1hfYUFAmMR0ULHEKGkQNfmyJSwvO7kJsw/view?usp=sharing",
+    name: "resume",
+  },
+];
+
 // const medium_url = "https://medium.com/@sleepingFish/latest?format=json";

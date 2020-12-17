@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="app">
       <NavBar />
-      <Background />
+      {/* <Background /> */}
       <Home />
       <About />
       <Projects />

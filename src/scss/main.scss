@@ -16,13 +16,14 @@ body {
   position: relative;
 }
 
-.sketch {
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  //   color: black;
-}
+// .sketch {
+//   position: absolute;
+//   z-index: -1;
+//   width: 100vw;
+//   height: 100vh;
+//   visibility: visible;
+//   //   color: black;
+// }
 
 h1,
 h2,
@@ -72,14 +73,6 @@ footer {
   &:hover {
     color: $secondary-color;
   }
-}
-
-.header {
-  position: fixed;
-  z-index: 50;
-  width: 100%;
-  padding: 0.5rem;
-  display: flex;
 }
 
 html::-webkit-scrollbar {

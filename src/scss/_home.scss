@@ -6,11 +6,11 @@
 // $home-secondary-color: green;
 
 .home {
-  position: relative;
+  // position: relative;
   height: 100vh;
   padding-top: 35vh;
   overflow: hidden;
-  background: transparent;
+  background: $primary-color;
   // z-index: 5;
 
   &__content {

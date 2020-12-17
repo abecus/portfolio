@@ -6,11 +6,10 @@
 }
 
 .home {
-  position: relative;
   height: 100vh;
   padding-top: 35vh;
   overflow: hidden;
-  background: transparent;
+  background: white;
 }
 
 .home__content h2 {
@@ -44,9 +43,19 @@
   padding-bottom: 0.5rem;
 }
 
+.header {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .menu-btn {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   right: 1rem;
   top: 1rem;
   height: 20px;
@@ -111,7 +120,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  opacity: 0.98;
+  opacity: 0.95;
   visibility: hidden;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -239,7 +248,7 @@
   height: auto;
   background: transparent;
   background-color: white;
-  z-index: 5;
+  z-index: 2;
   -webkit-box-shadow: 0 0 25px #b3b3b3;
           box-shadow: 0 0 25px #b3b3b3;
 }
@@ -406,7 +415,7 @@
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -551,7 +560,7 @@
   min-height: 100vh;
   background-color: white;
   position: relative;
-  z-index: 5;
+  z-index: 2;
   -webkit-box-shadow: 0 0 25px #b3b3b3;
           box-shadow: 0 0 25px #b3b3b3;
 }
@@ -644,39 +653,12 @@
   border-radius: 10px;
 }
 
-.blogs__btns {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
-.blogs__btn {
-  opacity: 0;
-  color: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.blogs__btn__git {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.blogs__btn__git:hover {
-  color: #000;
-}
-
 @media screen and (min-width: 768px) {
   .menu-btn {
     visibility: hidden;
+  }
+  .sketch {
+    visibility: visible;
   }
   .home {
     padding-top: 35vh;
@@ -695,7 +677,6 @@
   }
   .nav {
     visibility: visible;
-    opacity: 95%;
   }
   .nav.scrolled {
     -webkit-box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
@@ -803,13 +784,6 @@ body {
   position: relative;
 }
 
-.sketch {
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-}
-
 h1,
 h2,
 h3 {
@@ -866,16 +840,6 @@ footer {
 
 footer:hover {
   color: green;
-}
-
-.header {
-  position: fixed;
-  z-index: 50;
-  width: 100%;
-  padding: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 html::-webkit-scrollbar {
