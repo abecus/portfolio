@@ -32,11 +32,16 @@
       border-right: 3px solid $secondary-color;
     }
 
-    .form input,
-    .form textarea {
+    // .form input,
+    .text_input {
       border: 0;
-      border-bottom: 2px solid
-        change-shade($color: $primary-color, $amount: 60%, $shade: "light");
+      color: change-shade(
+        $color: $primary-color,
+        $amount: 60%,
+        $shade: "light"
+      );
+      // border-bottom: 2px solid
+      //   change-shade($color: $primary-color, $amount: 60%, $shade: "light");
       width: 100%;
       padding-bottom: 5px;
       margin: 0.5rem;
@@ -46,13 +51,6 @@
       color: set-text-color($primary-color);
       background-color: transparent;
       @include transition-ease;
-
-      &:focus {
-        padding-bottom: 5px;
-        font-weight: 400;
-        border-width: 2px;
-        border-color: $secondary-color;
-      }
     }
     .button-container {
       display: flex;
@@ -75,8 +73,7 @@
             $shade: "light"
           );
           cursor: pointer;
-          box-shadow: rgba(114, 113, 113, 0.075) 2px 3px 1px;
-          transform: translate3d(-1px, -2px, 2px);
+          box-shadow: rgba(114, 113, 113, 0.075) 5px 5px 1px;
         }
       }
     }

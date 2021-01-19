@@ -1,5 +1,5 @@
 import "./css/main.css";
-import React, { useEffect } from "react";
+import React from "react";
 import Home from "./components/home";
 import Projects from "./components/projects";
 import Mail from "./components/mail";
@@ -8,7 +8,7 @@ import About from "./components/about";
 import Blogs from "./components/blogs";
 import NavBar from "./components/navbar";
 // import TextInLine from "./components/textInline";
-import Background from "./components/background";
+// import Background from "./components/background";
 
 function App() {
   return (

@@ -30,7 +30,7 @@ export default function footer() {
           <FaMediumM size={30} />
         </a>
       </div>
-      <footer>&copy; Copyright 2020</footer>
+      <footer>&copy; Copyright {new Date().getFullYear()}</footer>
     </>
   );
 }

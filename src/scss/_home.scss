@@ -7,7 +7,8 @@
 
 .home {
   // position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   padding-top: 35vh;
   overflow: hidden;
   background: $primary-color;
