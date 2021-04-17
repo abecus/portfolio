@@ -2,7 +2,7 @@ import React from "react";
 import { useFetchFromFirebase } from "../data";
 
 export default function About() {
-  const { data: jobs, loading } = useFetchFromFirebase("jobs", ["date", "asc"]);
+  const { data: jobs, loading } = useFetchFromFirebase("jobs", ["id", "asc"]);
 
   return (
     <section className="about" id="about">

@@ -6,8 +6,10 @@
 }
 
 .home {
-  height: 100vh;
   padding-top: 35vh;
+  padding-bottom: 2rem;
+  min-height: 100vh;
+  height: auto;
   overflow: hidden;
   background: white;
 }
@@ -242,19 +244,18 @@
 }
 
 .about {
-  position: relative;
-  padding-bottom: 2rem;
-  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   height: auto;
-  background: transparent;
+  min-height: 100vh;
   background-color: white;
+  position: relative;
   z-index: 2;
   -webkit-box-shadow: 0 0 25px #b3b3b3;
           box-shadow: 0 0 25px #b3b3b3;
 }
 
 .about__boi-image {
-  height: 50vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -322,8 +323,8 @@
 }
 
 .projects {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   height: auto;
   min-height: 100vh;
 }
@@ -493,10 +494,9 @@
   border-right: 3px solid green;
 }
 
-.contact__container .form input,
-.contact__container .form textarea {
+.contact__container .text_input {
   border: 0;
-  border-bottom: 2px solid #666666;
+  color: #666666;
   width: 100%;
   padding-bottom: 5px;
   margin: 0.5rem;
@@ -507,14 +507,6 @@
   background-color: transparent;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-
-.contact__container .form input:focus,
-.contact__container .form textarea:focus {
-  padding-bottom: 5px;
-  font-weight: 400;
-  border-width: 2px;
-  border-color: green;
 }
 
 .contact__container .button-container {
@@ -541,10 +533,8 @@
 .contact__container .button-container button:hover {
   background-color: #00b300;
   cursor: pointer;
-  -webkit-box-shadow: rgba(114, 113, 113, 0.075) 2px 3px 1px;
-          box-shadow: rgba(114, 113, 113, 0.075) 2px 3px 1px;
-  -webkit-transform: translate3d(-1px, -2px, 2px);
-          transform: translate3d(-1px, -2px, 2px);
+  -webkit-box-shadow: rgba(114, 113, 113, 0.075) 5px 5px 1px;
+          box-shadow: rgba(114, 113, 113, 0.075) 5px 5px 1px;
 }
 
 .contact__container__right-side {
@@ -554,8 +544,8 @@
 }
 
 .blogs {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   height: auto;
   min-height: 100vh;
   background-color: white;
@@ -777,7 +767,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: white;
   color: #000;
   line-height: 1;
