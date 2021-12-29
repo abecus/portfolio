@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 
 function sendEmail(e) {
   e.preventDefault();
-  console.log(e.target);
+  // console.log(e.target);
 
   emailjs
     .sendForm(
@@ -18,7 +18,7 @@ function sendEmail(e) {
     )
     .then(
       (result) => {
-        console.log(result);
+        // console.log(result);
         alert("Massage Sent!");
       },
       (error) => {

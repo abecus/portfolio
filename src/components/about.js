@@ -3,7 +3,7 @@ import { useFetchFromFirebase } from "../data";
 
 export default function About() {
   const { data: jobs, loading } = useFetchFromFirebase("jobs", ["id", "asc"]);
-
+  // console.log(jobs);
   return (
     <section className="about" id="about">
       <div className="about__boi-image">
@@ -49,3 +49,4 @@ export default function About() {
     </section>
   );
 }
+
