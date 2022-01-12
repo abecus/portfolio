@@ -10,7 +10,7 @@ export default function Home() {
 
   // typeWriter
   useEffect(() => {
-    if (index === words.length) {
+    if (index === words.length - 1 && subIndex === words[index].length) {
       return;
     }
 
@@ -38,6 +38,7 @@ export default function Home() {
 
   // blinker
   useEffect(() => {
+    // console.log("count2...")
     const timeout2 = setTimeout(() => {
       setBlink((prev) => !prev);
     }, 500);
