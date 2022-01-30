@@ -70,10 +70,11 @@
   top: 0;
   left: 0;
   width: 100vw;
-  opacity: 0.95;
+  opacity: 1;
   visibility: hidden;
   // z-index: 5;
-  @include transition-ease;
+  // @include transition-ease;
+  transition: all 75ms ease;
 
   &.open {
     visibility: visible;

@@ -122,10 +122,10 @@
   top: 0;
   left: 0;
   width: 100vw;
-  opacity: 0.95;
+  opacity: 1;
   visibility: hidden;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 75ms ease;
+  transition: all 75ms ease;
 }
 
 .nav.open {
@@ -669,8 +669,8 @@
     visibility: visible;
   }
   .nav.scrolled {
-    -webkit-box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0.5rem 0.5em rgba(77, 77, 77, 0.5);
+            box-shadow: 0 0.5rem 0.5em rgba(77, 77, 77, 0.5);
   }
   .nav .menu-nav {
     display: block;
@@ -854,4 +854,3 @@ html::-webkit-scrollbar-track {
 .text-secondary {
   color: green;
 }
-/*# sourceMappingURL=main.css.map */
