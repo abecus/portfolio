@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import { projectToShow } from "../data";
 import { FaGithub } from "react-icons/fa";
 import { useFetchFromFirebase } from "../data";
@@ -6,7 +6,7 @@ import { useFetchFromFirebase } from "../data";
 export default function Projects() {
   // const gitHub_url = "https://api.github.com/users/abecus/repos";
   // const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const { data: toInclude, loading: firebaseLoading } =
     useFetchFromFirebase("projects", ["id", "asc"]);
 
