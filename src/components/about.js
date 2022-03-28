@@ -32,11 +32,12 @@ function get_diff_date_to_show(start_date_object, end_date_object) {
   var diff_year = Math.floor(all_diff_months / 12);
   var result = "";
   if (diff_year > 0) {
-    result += " " + diff_year + (diff_year > 1 ? " years" : " year");
+    result += " " + diff_year + (diff_year > 1 ? " years " : " year ");
   }
   if (diff_month > 0) {
     result += diff_month + (diff_month > 1 ? " months" : " month");
   }
+  // console.log(result);
   return result;
 }
 
