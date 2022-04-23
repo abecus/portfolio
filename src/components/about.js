@@ -109,8 +109,9 @@ export default function About() {
               );
               let diff_date_to_show = get_diff_date_to_show(
                 start_date_raw,
-                end_date === "Jul 1998"? new Date() : end_date_raw
+                end_date === "Jul 1998" ? new Date() : end_date_raw
               );
+              const job_description = job.desc.replaceAll("\\n", "\n");
               return (
                 <div className="jobs__job" key={index}>
                   <h2 className="text-secondary">{job.title}</h2>
@@ -121,7 +122,20 @@ export default function About() {
                     {date_to_show} • {diff_date_to_show}
                   </h4>
                   <h4 style={{ opacity: 0.75 }}>{job.place}</h4>
-                  <ReactMarkdown children={job.desc.replaceAll("\\n", "\n")} />
+                  
+                  <ReactMarkdown children={job_description} />
+
+                  {/* <p>
+
+                  {job_description.substring(0, 200)+"..."}
+                  <a
+                    // href={"_"}
+                    // target="_"
+                    className="blogs__items__item__link text-secondary"
+                    >
+                    read more
+                  </a>
+                    </p> */}
                 </div>
               );
             })}

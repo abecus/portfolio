@@ -49,17 +49,21 @@
   }
 
   .about {
+    padding-top: 6rem;
     font-size: 1.2rem;
   }
 
   .projects {
+    padding-top: 5rem;
     font-size: 1.2rem;
     &__items {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  .blogs__items {
+  .blogs{
+    padding-top: 5rem;
+    &__items {
     font-size: 1.2rem;
     width: 60vw;
     &__item {
@@ -72,8 +76,9 @@
       }
     }
   }
-
+}
   .contact {
+    padding-top: 6rem;
     font-size: 1.2rem;
     &__list {
       font-size: 1.2rem;
@@ -115,6 +120,7 @@
   }
 
   .projects {
+    // padding-top: 5rem;
     &__items {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -128,9 +134,13 @@
 }
 
 @include media-xl {
-  .projects__bio-image {
-    height: 20vh;
+  .projects {
+    // padding-top: 5rem;
+    &__bio-image {
+      height: 20vh;
+    }
   }
+
   .blogs__items {
     width: 80vw;
     grid-template-columns: repeat(2, 1fr);

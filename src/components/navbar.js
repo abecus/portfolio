@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { navbarLinks } from "../data";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -47,18 +48,25 @@ function Navbar() {
                     {name}
                   </a>
                 ) : (
-                  <a
-                    className="menu-nav__link"
-                    href={ref}
-                    onClick={() =>
-                      document
-                        .getElementById(`${ref.substring(1, ref.length)}`)
-                        .scrollIntoView({ behavior: "smooth" })
-                    }
-                  >
-                    {name}
-                  </a>
-                )}
+                  // <a
+                  //   className="menu-nav__link"
+                  //   href={ref}
+                  //   onClick={() =>
+                  //     document
+                  //       .getElementById(`${ref.substring(1, ref.length)}`)
+                  //       .scrollIntoView({ behavior: "smooth" })
+                  //   }
+                  // >
+                  //   {name}
+                  // </a>
+                  // "hi"
+                  <Link 
+                  className="menu-nav__link" 
+                  to={"/"+ref}
+                  // to="/"
+                   >{name}</Link>
+                )
+                }
               </li>
             );
           })}

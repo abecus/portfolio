@@ -3,23 +3,23 @@ import firebase from "./firebase.js";
 
 export const navbarLinks = [
   {
-    ref: "#home",
+    ref: "",
     name: "Home",
   },
   {
-    ref: "#about",
+    ref: "about",
     name: "About",
   },
   {
-    ref: "#projects",
+    ref: "projects",
     name: "projects",
   },
   {
-    ref: "#blog",
-    name: "blog",
+    ref: "blogs",
+    name: "blogs",
   },
   {
-    ref: "#contact",
+    ref: "contact",
     name: "contact",
   },
   {
