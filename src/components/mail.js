@@ -1,30 +1,44 @@
 import React from "react";
-import emailjs from "emailjs-com";
 import styled from "styled-components";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-// import Icon from "@material-ui/core/Icon";
 
 function sendEmail(e) {
   e.preventDefault();
-  // console.log(e.target);
 
-  emailjs
-    .sendForm(
-      "service_za8xfiy",
-      "template_llglw1m",
-      e.target,
-      "user_u9kbKA9qD1pCitF7kXiPE"
-    )
-    .then(
-      (result) => {
-        // console.log(result);
-        alert("Massage Sent!");
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+  const mail_subject = `${e.target.user_name.value} sent you a mail using Portfolio`;
+  const mail_body = `${e.target.message.value} \n\n\n was sent by ${e.target.user_email.value} (${e.target.user_name.value})`;
+
+  fetch("http://abdulsalamone.pythonanywhere.com/mail", {
+    method: "POST",
+    body: JSON.stringify({
+      key: "bababoeey",
+      receiver: "abdulsalamone@gmail.com",
+      subject: mail_subject,
+      body: mail_body,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => {
+      alert("Thanks for you message and visiting my website! :)");
+      // response.json();
+    })
+    .catch((err) => {
+      fetch("http://abdulsalamone.pythonanywhere.com/mail", {
+        method: "POST",
+        body: JSON.stringify({
+          key: "bababoeey",
+          receiver: "abdulsalamone@gmail.com",
+          subject: "!!! Mailing is not working for portfolio",
+          body: "subject",
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }).catch((err) => {});
+    });
 }
 
 const StyledTextField = styled(TextField)`
