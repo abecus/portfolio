@@ -9,10 +9,10 @@ function sendEmail(e) {
   const mail_subject = `${e.target.user_name.value} sent you a mail using Portfolio`;
   const mail_body = `${e.target.message.value} \n\n\n was sent by ${e.target.user_email.value} (${e.target.user_name.value})`;
 
-  fetch("http://abdulsalamone.pythonanywhere.com/mail", {
+  fetch("https://abdulsalamone.pythonanywhere.com/mail", {
     method: "POST",
     body: JSON.stringify({
-      key: "bababoeey",
+      key: "the key",
       receiver: "abdulsalamone@gmail.com",
       subject: mail_subject,
       body: mail_body,
